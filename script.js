@@ -26,6 +26,7 @@
 
   const temperature = ref(db, 'temperature');
   const quality = ref(db, 'airquality');
+  const status = ref(db, 'status');
 
 const connectedRef = ref(db, ".info/connected");
 onValue(connectedRef, (snap) => {
@@ -46,13 +47,14 @@ onValue(quality, (snapshot) => {
   const dataContainer = document.getElementById('esp-quality');
   dataContainer.innerHTML = JSON.stringify(data, null, 2); // Format and display data
 });
-onValue(level, (snapshot) => {
-  const data = snapshot.val();
-  const dataContainer = document.getElementById('esp-level');
-  dataContainer.innerHTML = JSON.stringify(data, null, 2); // Format and display data
-});
 onValue(status, (snapshot) => {
   const data = snapshot.val();
   const dataContainer = document.getElementById('esp-status');
-  dataContainer.innerHTML = JSON.stringify(data, null, 2); // Format and display data
+  if (data == 1){
+  dataContainer.innerHTML = "<img src='docs/images/cross.png'>";
+  }
+  else {
+  dataContainer.innerHTML = "<img src='docs/images/tick.png'>";
+  }
 });
+
