@@ -11,47 +11,18 @@
 </head>
 <body>
 
+	<script type="module" src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+	<script type="module" src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+
 	<script type="text/javascript" language="javascript">
-		$(document).ready(function() { 
-		   $('#events').click(function(){
-			  $('#bag').load('events.html #bag', function beSuper() {
-				var element = document.getElementById("events");
-                element.classList.add("super");
-				var element = document.getElementById("home");
-                element.classList.remove("super");
-				var element = document.getElementById("gallery");
-                element.classList.remove("super");
-				var element = document.getElementById("contact");
-                element.classList.remove("super");
-			  });
-		   });
-		});
 
 		$(document).ready(function() { 
 		   $('#gallery').click(function(){
-			  $('#bag').load('gallery.html #bag', function beSuper() {
+			   $('#bag').load('gallery.html #bag', function beSuper() {
 				var element = document.getElementById("gallery");
                 element.classList.add("super");
 				var element = document.getElementById("home");
-                element.classList.remove("super");
-				var element = document.getElementById("events");
-                element.classList.remove("super");
-				var element = document.getElementById("contact");
-                element.classList.remove("super");
-			  });
-		   });
-		});
-
-		$(document).ready(function() { 
-		   $('#contact').click(function(){
-			  $('#bag').load('contact.html #bag', function beSuper() {
-				var element = document.getElementById("contact");
-                element.classList.add("super");
-				var element = document.getElementById("home");
-                element.classList.remove("super");
-				var element = document.getElementById("events");
-                element.classList.remove("super");
-				var element = document.getElementById("gallery");
                 element.classList.remove("super");
 			  });
 		   });
@@ -59,31 +30,32 @@
 
 		$(document).ready(function() { 
 		   $('#home').click(function(){
-			  $('#bag').load('index.html #bag', function beSuper() {
+			   $('#bag').load('index.html #bag', function beSuper() {
 				var element = document.getElementById("home");
                 element.classList.add("super");
-				var element = document.getElementById("events");
-                element.classList.remove("super");
 				var element = document.getElementById("gallery");
                 element.classList.remove("super");
-				var element = document.getElementById("contact");
-                element.classList.remove("super");			
 			  });
 		   });
 		});
 
 		$(document).ready(function() { 
-		   $(document).on("click", "#read-more", function(){
+			$(document).on("click", "#read-more", function() {
 			  $('#read-more-contents').load('misc.html #read-more-contents')
 		   });
 		});
+
 	</script>
+	<script type="module" src="script.js"></script>
 
 	<nav class="navbox__top--logo">
 	</nav>
 	
 	<nav class="navbox__top">
 		<li>
+			<div class="navbox__top--logo">
+				<img src="docs/images/logo-removed.png" width="32">
+			</div>
 			<h1>
 				Kapithan 
 				<br>
@@ -103,15 +75,32 @@
 
 		<section id="about" class="pouch pouch--filled">
 			<h2>
-				<span class="small">SINCE 1994</span>
+				<span class="small">YOUR HOME</span>
 				<br>
-				meow
+				STATUS
 			</h2>
-			<p></p>
+			<div class="status-image">
+				<img src="docs/images/tick.png"
+			</div>
+				<p>Current Status is 
+					<span id="esp-status">Good</span>
+				</p>
+			<div class="progress">
+				<p>Temperature
+					<span id="esp-temp">hey</span>
+				</p>
+				<p>Air Quality
+					<span id="esp-quality">hey</span>
+				</p>
+				<p>Smoke Level
+					<span id="esp-level">hey</span>
+				</p>
+        </div>
 		</section>
 
 		<section class="pouch pouch--outlined">
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias dolorem voluptas, rerum, veritatis vitae esse modi tempora nulla eos voluptatum quia obcaecati magni distinctio, corporis dignissimos. Hic, minus eaque.</p>
+			<h2><span class="small">ESP32 LOG</span></h2>
+			<p id="esp-connection">No Problems Found.</p>
 		</section>
 
 		<div class="abs__spacer"></div>

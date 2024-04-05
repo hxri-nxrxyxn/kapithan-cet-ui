@@ -86,7 +86,7 @@ img {
 }
 
 .navbox__top--logo img {
-    width: 10rem;
+    width: 9rem;
     padding-top: 2rem;
 }
 
@@ -302,6 +302,7 @@ form button {
     }
 
 }
+
 
 @media screen and (min-width: 1920px) {
 
