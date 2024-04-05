@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="shortcut icon" href="docs/images/Chinaliya_Logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="docs/style/animations.css">
+	<title>Chinaliya Sports Club | Moorkanad</title>
+</head>
+<body>
+
+	<script type="text/javascript" language="javascript">
+		$(document).ready(function() { 
+		   $('#events').click(function(){
+			  $('#bag').load('events.html #bag', function beSuper() {
+				var element = document.getElementById("events");
+                element.classList.add("super");
+				var element = document.getElementById("home");
+                element.classList.remove("super");
+				var element = document.getElementById("gallery");
+                element.classList.remove("super");
+				var element = document.getElementById("contact");
+                element.classList.remove("super");
+			  });
+		   });
+		});
+
+		$(document).ready(function() { 
+		   $('#gallery').click(function(){
+			  $('#bag').load('gallery.html #bag', function beSuper() {
+				var element = document.getElementById("gallery");
+                element.classList.add("super");
+				var element = document.getElementById("home");
+                element.classList.remove("super");
+				var element = document.getElementById("events");
+                element.classList.remove("super");
+				var element = document.getElementById("contact");
+                element.classList.remove("super");
+			  });
+		   });
+		});
+
+		$(document).ready(function() { 
+		   $('#contact').click(function(){
+			  $('#bag').load('contact.html #bag', function beSuper() {
+				var element = document.getElementById("contact");
+                element.classList.add("super");
+				var element = document.getElementById("home");
+                element.classList.remove("super");
+				var element = document.getElementById("events");
+                element.classList.remove("super");
+				var element = document.getElementById("gallery");
+                element.classList.remove("super");
+			  });
+		   });
+		});
+
+		$(document).ready(function() { 
+		   $('#home').click(function(){
+			  $('#bag').load('index.html #bag', function beSuper() {
+				var element = document.getElementById("home");
+                element.classList.add("super");
+				var element = document.getElementById("events");
+                element.classList.remove("super");
+				var element = document.getElementById("gallery");
+                element.classList.remove("super");
+				var element = document.getElementById("contact");
+                element.classList.remove("super");			
+			  });
+		   });
+		});
+
+		$(document).ready(function() { 
+		   $(document).on("click", "#read-more", function(){
+			  $('#read-more-contents').load('misc.html #read-more-contents')
+		   });
+		});
+	</script>
+
+	<nav class="navbox__top--logo">
+	</nav>
+	
+	<nav class="navbox__top">
+		<li>
+			<h1>
+				Kapithan 
+				<br>
+				<span class="small">Fire Alarm Sensor</span>
+			</h1>
+		</li>
+	</nav>
+
+	<nav class="navbox__bottom">
+		<li>
+			<a id="home" class="super"  onclick="beSuper">STATUS</a>
+			<a id="gallery" onclick="beSuper">READINGS</a>
+		</li>
+	</nav>
+
+	<div id="bag">
+
+		<section id="about" class="pouch pouch--filled">
+			<h2>
+				<span class="small">SINCE 1994</span>
+				<br>
+				meow
+			</h2>
+			<p></p>
+		</section>
+
+		<section class="pouch pouch--outlined">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias dolorem voluptas, rerum, veritatis vitae esse modi tempora nulla eos voluptatum quia obcaecati magni distinctio, corporis dignissimos. Hic, minus eaque.</p>
+		</section>
+
+		<div class="abs__spacer"></div>
+
+	</div>
+
+</body>
+</html>
