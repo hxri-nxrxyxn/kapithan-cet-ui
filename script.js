@@ -26,8 +26,6 @@
 
   const temperature = ref(db, 'temperature');
   const quality = ref(db, 'airquality');
-  const level = ref(db, 'smokelevel');
-  const status = ref(db, 'fine');
 
 const connectedRef = ref(db, ".info/connected");
 onValue(connectedRef, (snap) => {
